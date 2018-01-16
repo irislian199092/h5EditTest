@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div contenteditable='true' id="test">哈哈哈哈</div>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script>
+$(function(){
+	$('#test').on('paste', function(e) {
+        e.preventDefault();
+        var text = null;
+        text = (e.originalEvent || e).clipboardData.getData('text/plain') || prompt('在这里输入文本');
+
+        console.log('text',text)
+        document.execCommand("insertText", false, text);
+        
+    });
+    $('#test').on('blur',function(){
+    	console.log('------',$('#test').html())
+    })
+	//$('#test')[0].document.execCommand('bold',false,null)
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>IdeaBoard</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/font-awesome.css" rel="stylesheet" type="text/css">
+<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="header">
+  <div class="setting"><a href="#" title="设置"><i class="fa fa-gear"></i></a></div>
+  <div class="logo"></div>
+  <a class="button2" href="#"><i class="fa fa-eye"></i>预览作品</a><a class="button" href="#"><i class="fa fa-check"></i>保存</a> </div>
+<div id="editor">
+  <div class="editor-left">
+    <div class="left-bar">
+      <ul>
+        <li class="active"><a href="wenben.html"><i class="fa fa-font"></i>文本</a></li>
+        <li><a href="sucai.html"><i class="fa fa-photo"></i>素材</a></li>
+        <li><a href="beijing.html"><i class="fa fa-th"></i>背景</a></li>
+      </ul>
+    </div>
+    <div class="bar-1 panel">
+      <div class="panel-body"> 
+       <ul class="text-style">
+       		<li><a href="#"><h1>大标题</h1></a></li>
+       		<li><a href="#"><h2>标题</h2></a></li>
+       		<li><a href="#"><h3>副标题</h3></a></li>
+       		<li><a href="#"><h4>小标题</h4></a></li>
+       		<li><a href="#">正文</a></li>
+       </ul>
+      </div>
+    </div>
+  </div>
+  <div class="editor-main">
+    <div class="canvas">
+      <div class="screen"></div>
+      <a class="button" href="#" style="width:250px;padding:6px; margin: 30px;" ><i class="fa fa-plus"></i>新页面</a> 
+    </div>
+    
+    <div class="screen-menu">
+      <ul class="menu-box">
+        <li><a href="#" title="撤销"><i  class="fa fa-mail-reply"></i></a></li>
+        <li><a href="#" title="恢复"><i  class="fa fa-mail-forward"></i></a></li>
+      </ul>
+      <ul class="menu-box">
+        <li><a href="#" title="网格"><i  class="fa fa-table"></i></a></li>
+        <li><a href="#" title="预览"><i  class="fa fa-eye"></i></a></li>
+      </ul>
+      <ul class="menu-box">
+        <li><a href="#" title="复制"><i  class="fa fa-copy"></i></a></li>
+      </ul>
+    </div>
+    
+  </div>
+  <div class="editor-right">
+    <div class="right-panel">
+      <div class="rp-header"><i class="fa fa-bars"></i>文本设置</div>
+      <div  class="rp-body"><img src="image/right-3.jpg" /></div>
+      <!--此处使用js控件实现--> 
+    </div>
+    <div class="right-panel">
+      <div class="rp-header"><i class="fa fa-bars"></i>位置</div>
+      <div  class="rp-body"><img src="image/right-2.jpg" /></div>
+      <!--此处使用js控件实现--> 
+    </div>
+  </div>
+</div>
+<script src="js/jquery.min.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/jquery-ui.min.js"></script> 
+<script src="js/scroll/jquery.mousewheel.min.js"></script> 
+<script src="js/scroll/jquery.mCustomScrollbar.js"></script> 
+<script type="text/javascript">
+    (function($){
+        $(window).load(function(){
+            $(".content").mCustomScrollbar();
+        });
+    })(jQuery);
+	
+</script> 
+<!-- Javascript Libraries --> 
+
+<!-- jQuery --> 
+<script src="vendors/bower_components/jquery/dist/jquery.min.js"></script> 
+
+<!-- Bootstrap --> 
+<script src="vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script> 
+<script src="vendors/bower_components/flot.curvedlines/curvedLines.js"></script> 
+
+<!-- Sparkline Charts --> 
+<script src="vendors/jquery.sparkline/jquery.sparkline.min.js"></script> 
+
+<!-- EasyPie Charts --> 
+<script src="vendors/bower_components/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script> 
+
+<!-- Site Functions & Actions --> 
+<script src="js/app.min.js"></script>
+</body>
+</html>

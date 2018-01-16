@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>H5</title>
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+	<div class="header">
+		<div class="header_setting">
+			<i class="fa fa-gear"></i>
+		</div>
+		<div class="header_logo">
+		</div>
+		<div class="header_button">
+			<button class="btn btn_blue" id="js_save_work"><i class="fa fa-check"></i>保存</button>
+			<button class="btn btn_grey" id="js_watch_work"><i class="fa fa-eye"></i>预览作品</button>
+		</div>
+	</div>
+	<div class="leftNavbarBox">
+		<div class="leftNavbar">
+			<ul>
+				<li class="active" id="js_tab_bar_text"><a href="javascript:;"><i class="fa fa-font"></i>文本</a></li>
+				<li id="js_tab_bar_upload"><a href="javascript:;"><i class="fa fa-photo"></i>素材</a></li>
+				<!-- <li><a href="javascript:;"><i class="fa fa-photo"></i>素材</a></li>
+				<li><a href="javascript:;"><i class="fa fa-th"></i>背景</a></li> -->
+			</ul>
+		</div>
+		<div class="leftItemlist">
+			<div class="tab_text" id="js_tab_text">
+				
+			</div>
+			<div class="tab_upload" id="js_tab_upload">
+				<div class="material_box" id="js_material_box">
+					<div class="images_box">
+						<img src="images/test.jpg" alt="" data-type="images">
+						<span>X</span>
+					</div>
+					<div class="images_box active">
+						<img src="images/test2.jpg" alt="" data-type="images">
+						<span>X</span>
+					</div>
+					<div class="images_box">
+						<img src="images/test2.jpg" alt="" data-type="images">
+						<span>X</span>
+					</div>
+					<div class="images_box">
+						<img src="images/test2.jpg" alt="" data-type="images">
+						<span>X</span>
+					</div>
+					<div class="images_box active">
+						<img src="images/test.jpg" alt="" data-type="images">
+						<span>X</span>
+					</div>
+					<div class="images_box">
+						<img src="images/test2.jpg" alt="" data-type="images">
+						<span>X</span>
+					</div>
+					
+
+					
+				</div>
+				<form action="" id="uploadForm">
+					<input type="file" name="file">
+				</form>
+				
+				<!-- <button class="btn btn_upload"><i class="fa fa-upload"></i>上传素材</button> -->
+			</div>
+		</div>
+		
+	</div>
+	<div class="middleContext" id="js_middleContext">
+		
+		<div class="editBox">
+			<div class="cover">
+				<span class="coverLT" data-type="LT"></span>
+				<span class="coverRT" data-type="RT"></span>
+				<span class="coverLB" data-type="LB"></span>
+				<span class="coverRB" data-type="RB"></span>
+			</div>
+		</div>
+		<div class="editBox" style="top:550px">
+			<div class="cover">
+				<span class="coverLT" data-type="LT"></span>
+				<span class="coverRT" data-type="RT"></span>
+				<span class="coverLB" data-type="LB"></span>
+				<span class="coverRB" data-type="RB"></span>
+			</div>
+		</div>
+		<ul class="editBox_tool">
+			<li>
+				<a href=""><i class="fa fa-mail-reply" tile="撤销"></i></a>
+			</li>
+			<li>
+				<a href=""><i class="fa fa-mail-forward" tile="恢复"></i></a>
+			</li>
+			<li>
+				<a href=""><i class="fa fa-copy" tile="复制"></i></a>
+			</li>
+		</ul>
+	</div>
+	<div class="rightContext">
+		<div class="text_attribute_box">
+			<div class="text_header">
+				<i class="fa fa-bars"></i>文本设置
+			</div>
+			<div class="text_body">
+				<div class="text_attr text_align_pos" id="js_text_align_pos">
+					<a class="label">对齐</a>
+					<span><i class="fa fa-align-left" title="左对齐"></i></span>
+					<span><i class="fa fa-align-center" title="居中"></i></span>
+					<span><i class="fa fa-align-right" title="右对齐"></i></span>
+				</div>
+				<div class="text_attr text_style" id="js_text_style">
+					<a class="label">样式</a>
+					<span class="h5_bold"><i title="加粗" class="fa fa-bold"></i></span>
+					<span class="h5_italic"><i title="斜体" class="fa fa-italic"></i></span>
+					<span class="h5_underline"><i title="下划线" class="fa fa-underline"></i></span>
+					<span class="h5_leftAlign"><i title="文本左对齐" class="fa fa-align-left"></i></span>
+					<span class="h5_centerAlign"><i title="文本居中" class="fa fa-align-center"></i></span>
+					<span class="h5_rightAlign"><i title="文本右对齐" class="fa fa-align-right"></i></span>
+				</div>
+				<div class="text_attr text_color colorpicker-demo2">
+					<a class="label">颜色</a>
+					<input type="text" data-control="hue" value="#000" id="js_color" />
+				</div>
+				<div class="text_attr text_fontsize">
+					<a class="label">大小</a>
+					<select name="" id="js_text_fontsize">
+						<option value="14">14px</option>
+						<option value="18">18px</option>
+						<option value="20">20px</option>
+						<option value="30">30px</option>
+						<option value="48">48px</option>
+					</select>
+				</div>
+				<div class="text_attr text_fontfamily">
+					<a class="label">字体</a>
+					<select name="" id="js_text_fontfamily">
+						<option value="微软雅黑">微软雅黑</option>
+						<option value="宋体">宋体</option>
+						<option value="黑体">黑体</option>
+						<option value="楷体">楷体</option>
+					</select>
+				</div>
+				<div class="text_attr text_lineheight">
+					<a class="label">行距</a>
+					<select name="" id="js_text_lineheight">
+						<option value="1.3">1.3倍</option>
+						<option value="1.4">1.4倍</option>
+						<option value="1.5">1.5倍</option>
+						<option value="1.6">1.6倍</option>
+						<option value="1.7">1.7倍</option>
+						<option value="1.8">1.8倍</option>
+					</select>
+				</div>
+				<div class="text_attr text_opacity">
+					<a class="label">透明</a>
+					<input type="range"  min="0" max="1" step="0.1" id="text_opacity_range">
+					<input type="text"  id="text_opacity_text">
+				</div>
+				
+			</div>
+			<div class="text_header">
+				<i class="fa fa-bars"></i>位置设置
+			</div>
+			<div class="text_body">
+				<div class="text_attr text_pos_x" >
+					<a class="label">左</a>
+					<input type="text" id="js_text_pos_x">
+				</div>
+				<div class="text_attr text_pos_y" >
+					<a class="label">上</a>
+					<input type="text" id="js_text_pos_y">
+				</div>
+				<div class="text_attr text_pos_width" >
+					<a class="label">宽</a>
+					<input type="text" id="js_text_pos_width">
+				</div>
+				<div class="text_attr text_pos_height">
+					<a class="label">高</a>
+					<input type="text"  id="js_text_pos_height">
+				</div>
+			</div>
+		</div>
+		<div class="images_attribute_box">
+			<div class="images_header">
+				<i class="fa fa-bars"></i>图片设置
+			</div>
+			<div class="images_body">
+				<div class="images_attr images_align_pos" id="js_images_align_pos">
+					<a class="label">对齐</a>
+					<span><i class="fa fa-align-left" title="左对齐"></i></span>
+					<span><i class="fa fa-align-center" title="居中"></i></span>
+					<span><i class="fa fa-align-right" title="右对齐"></i></span>
+				</div>
+				<div class="images_attr images_opacity">
+					<a class="label">透明</a>
+					<input type="range"  min="0" max="1" step="0.1" id="images_opacity_range">
+					<input type="text"  id="images_opacity_text" readonly="true">
+				</div>
+				<div class="images_attr images_radius">
+					<a class="label">圆角</a>
+					<input type="range"  min="0"  id="images_radius_range">
+					<input type="text"  id="images_radius_text" readonly="true">
+				</div>
+				
+				<div class="images_attr images_rotate">
+					<a class="label">旋转</a>
+					<input type="range"  min="0" max="360" step="90" id="images_rotate_range">
+					<input type="text"  id="images_rotate_text" readonly="true">
+				</div>
+				
+			</div>
+			<div class="images_header">
+				<i class="fa fa-bars"></i>位置设置
+			</div>
+			<div class="images_body">
+				<div class="images_attr images_pos_x" >
+					<a class="label">左</a>
+					<input type="text" id="js_images_pos_x">
+				</div>
+				<div class="images_attr images_pos_y" >
+					<a class="label">上</a>
+					<input type="text" id="js_images_pos_y">
+				</div>
+				<div class="images_attr images_pos_width" >
+					<a class="label">宽</a>
+					<input type="text" id="js_images_pos_width">
+				</div>
+				<div class="images_attr images_pos_height">
+					<a class="label">高</a>
+					<input type="text"  id="js_images_pos_height">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.4.4/babel.min.js"></script><!-- ES6插件 -->
+<!-- <script src="js/server.js"></script>
+ --><script src="js/jquery.minicolors.js"></script><!-- 颜色取色插件 -->
+<script src="js/base.js"></script><!-- 定义公用方法常量 -->
+<script src="js/app.js"></script>
+</body>
+</html>
